@@ -1,20 +1,21 @@
 <template>
-    <div class="hello">
-      <el-table
-        :data="list"
-        style="width: 100%"
-        :row-class-name="tableRowClassName">
-        <el-table-column label="姓名">
-          <template slot-scope="scope">{{scope.row.sName}}</template>
-        </el-table-column>
-        <el-table-column label="性别">
-          <template slot-scope="scope">{{scope.row.sSex | formatSex}}</template>
-        </el-table-column>
-        <el-table-column label="年龄">
-          <template slot-scope="scope">{{scope.row.sAge}}</template>
-        </el-table-column>
-      </el-table>
-    </div>
+  <div class="hello">
+    <h2>{{msg}}</h2>
+    <el-table
+      :data="list"
+      style="width: 100%"
+      :row-class-name="tableRowClassName">
+      <el-table-column label="姓名">
+        <template slot-scope="scope">{{scope.row.sName}}</template>
+      </el-table-column>
+      <el-table-column label="性别">
+        <template slot-scope="scope">{{scope.row.sSex | formatSex}}</template>
+      </el-table-column>
+      <el-table-column label="年龄">
+        <template slot-scope="scope">{{scope.row.sAge}}</template>
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
 <style>
@@ -31,7 +32,7 @@
 <script>
   import {queryStuLiByName} from '@/api/student'
   export default {
-  name: 'HelloWorld',
+  name: 'stuIndex',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
