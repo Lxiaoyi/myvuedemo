@@ -1,6 +1,8 @@
 # myvuedemo
 
-> A Vue.js project
+> 1. 使用vue-cli搭建，并增加后台请求
+> 2. 前后端联调，后台根据实际情况修改dev.env.js中BASE_API路径即可
+> 3. 后台demo传送门:[demo](https://github.com/Lxiaoyi/demo)
 
 ## Build Setup
 
