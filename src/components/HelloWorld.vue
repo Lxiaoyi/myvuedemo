@@ -91,14 +91,14 @@
     return {
       msg: 'Welcome to Your Vue.js App',
       list : null,
-      total : null
     }
   },
   methods : {
     getList() {
       queryStuLiByName({pageNum: 1, pageSize: 5, keyword : ''}).then(response => {
-        this.list = response.data.list;
-        this.total = response.data.total;
+        let result = response.data;
+        this.list = result.data.list;
+        console.info(this.list)
       });
     }
   },
