@@ -1,37 +1,13 @@
 <template>
-  <el-container>
-  <div class="hello">
-    <el-header>{{ msg }}</el-header>
-    <el-table
-      :data="list"
-      style="width: 100%"
-      :row-class-name="tableRowClassName">
-      <el-table-column
-        prop="sName"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="sSex"
-        label="性别"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="sAge"
-        label="年龄">
-      </el-table-column>
-    </el-table>
-  </div>
-
     <div class="hello">
       <el-table
         :data="list"
         style="width: 100%"
         :row-class-name="tableRowClassName">
-        <el-table-column label="姓名" width="180">
+        <el-table-column label="姓名">
           <template slot-scope="scope">{{scope.row.sName}}</template>
         </el-table-column>
-        <el-table-column label="性别" width="180">
+        <el-table-column label="性别">
           <template slot-scope="scope">{{scope.row.sSex | formatSex}}</template>
         </el-table-column>
         <el-table-column label="年龄">
@@ -39,7 +15,6 @@
         </el-table-column>
       </el-table>
     </div>
-  </el-container>
 </template>
 
 <style>
